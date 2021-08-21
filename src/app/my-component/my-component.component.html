@@ -1,0 +1,13 @@
+<div>
+  <div>
+    <button (click)='toggleImage()'>
+      {{showImage? 'Hide' : 'Show' }} Image
+    </button>
+  </div>
+  <div *ngFor="let employee of employees">
+    {{employee.id}} <br/>
+  {{employee.name}}
+    <img *ngIf='showImage' [src]='employee.imageUrl' />
+    <hr />
+  </div>
+</div>
